@@ -31,9 +31,13 @@ body {
 
     #bodyContent {
         display:grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: minmax(20%,1fr) minmax(70%,3fr);
         padding:1em;
         gap:1em;
+
+        .scroll_body {
+            overflow: auto;
+        }
 
         #contact {
             background-color: lightgrey;
@@ -60,6 +64,7 @@ body {
                 border:3px solid grey;
                 padding:40px 30px;
                 border-radius: 20px;
+                // overflow:auto;
 
                 h3 {
                     text-decoration: underline;
@@ -73,6 +78,10 @@ body {
 
                 ul {
                     padding-left:20px;
+
+                    // li {
+                    //     overflow:auto;
+                    // }
                 }
 
             }
