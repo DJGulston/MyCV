@@ -1,46 +1,47 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin:0px;
-    background-color: white;
+    background-color: white; // Main background colour of page is white.
 
     a {
-        text-decoration: none;
+        text-decoration: none; // Removes the underline from the links.
         color:orangered;
     }
 
     a:hover {
-        color:black;
+        color:black; // Font colour of links turn black when hovered over.
     }
     
     #topbar {
-        background-color: rgb(255, 123, 0);
+        background-color: rgb(255, 123, 0); // Background colour of the topbar div element is an orange-type colour.
         //background-color: rgb(0, 58, 128);
         text-align: center;
         color: white;
         font-size: 25px;
         
         h1 {
-            margin:0px;
+            margin:0px; // Removes the gap created by the heading margin, thus making the #topbar div element have a complete orange colour at the top of the page.
             font-weight:bold;
-            //font-family: 'Times New Roman', Times, serif;
-            //text-decoration: underline;
         }
     }
 
 
-
+    // The #bodyContent div box contains the contact details and the main content of the CV.
+    // The contact details and main CV content is displayed in a grid format.
+    // The grid is made up of one row and two columns.
+    // The two columns consist of the contact details on the left and main CV content on the right.
     #bodyContent {
         display:grid;
-        grid-template-columns: minmax(20%,1fr) minmax(70%,3fr);
+        grid-template-columns: minmax(20%,1fr) minmax(70%,3fr); // Contact details make up 20% of the page width to 1fr of the page width, main CV content makes up 70% of the page width to 3fr of the page width.
         padding:1em;
-        gap:1em;
+        gap:1em; // Spacing added between the grid items.
 
         .scroll_body {
-            overflow: auto;
+            overflow: auto; // When text overflows in any .scroll_body html element, a scrollbar is added to the content.
         }
 
         #contact {
-            background-color: lightgrey;
+            background-color: lightgrey; // Contact details grid item given lightgrey background colour.
             border-radius: 20px;
             padding:1em;
 
@@ -49,6 +50,7 @@ body {
 
                 img {
                     width:80%;
+                    // Image is centered within its container element.
                     display:block;
                     margin-left: auto;
                     margin-right: auto;
@@ -61,10 +63,9 @@ body {
             }
 
             #contact_body {
-                border:3px solid grey;
+                border:3px solid grey; // Contact details surrounded with grey border.
                 padding:40px 30px;
                 border-radius: 20px;
-                // overflow:auto;
 
                 h3 {
                     text-decoration: underline;
@@ -78,10 +79,6 @@ body {
 
                 ul {
                     padding-left:20px;
-
-                    // li {
-                    //     overflow:auto;
-                    // }
                 }
 
             }
@@ -89,14 +86,15 @@ body {
         }
 
         #mainContent {
-            background-color: lightgrey;
+            background-color: lightgrey; // Main CV details grid item given lightgrey background colour.
             border-radius: 20px;
             padding:1em;
-            display:grid;
-            row-gap: 1.5em;
+            display:grid; // Sections within main CV content displayed in a grid format as well.
+            row-gap: 1.5em; // Spacing allocated between grid elements.
 
+            // These direct div child elements represent each grid item within the main CV content.
             > div {
-                border:3px solid grey;
+                border:3px solid grey; // Direct div child elements given a grey border.
                 padding:20px 30px;
                 border-radius: 20px;
             }
@@ -107,7 +105,7 @@ body {
 
             ol {
                 li::marker {
-                    font-weight: bold;
+                    font-weight: bold; // Numbered bullet point for ordered list items given a bold format.
                 }
             }
         }
