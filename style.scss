@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin:0px;
-    background-color: white; // Main background colour of page is white.
+    background-color: whitesmoke; // Main background colour of page is white.
 
     a {
         text-decoration: none; // Removes the underline from the links.
@@ -12,16 +12,24 @@ body {
         color:black; // Font colour of links turn black when hovered over.
     }
     
-    #topbar {
+    #page-header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
         background-color: rgb(255, 123, 0); // Background colour of the topbar div element is an orange-type colour.
-        //background-color: rgb(0, 58, 128);
         text-align: center;
         color: white;
-        font-size: 25px;
+        height: 90px;
         
-        h1 {
-            margin:0px; // Removes the gap created by the heading margin, thus making the #topbar div element have a complete orange colour at the top of the page.
-            font-weight:bold;
+        div {
+            position: relative;
+            // font-weight:bold;
+            font-size: 30px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
         }
     }
 
@@ -31,6 +39,7 @@ body {
     // The grid is made up of one row and two columns.
     // The two columns consist of the contact details on the left and main CV content on the right.
     #bodyContent {
+        margin-top: 90px;
         display:grid;
         grid-template-columns: minmax(20%,1fr) minmax(70%,3fr); // Contact details make up 20% of the page width to 1fr of the page width, main CV content makes up 70% of the page width to 3fr of the page width.
         padding:1em;
@@ -44,6 +53,7 @@ body {
             background-color: lightgrey; // Contact details grid item given lightgrey background colour.
             border-radius: 20px;
             padding:1em;
+            // border: 1px solid grey;
 
             #contact_head {
                 padding:30px 0px;
@@ -91,6 +101,7 @@ body {
             padding:1em;
             display:grid; // Sections within main CV content displayed in a grid format as well.
             row-gap: 1.5em; // Spacing allocated between grid elements.
+            // border: 1px solid grey;
 
             // These direct div child elements represent each grid item within the main CV content.
             > div {

@@ -1,118 +1,144 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  background-color: white;
+  margin:0px;
+  background-color: rgb(0, 0, 45);
+  color: whitesmoke;
 }
 
-body a {
+a {
   text-decoration: none;
-  color: orangered;
+  color: limegreen;
 }
 
-body a:hover {
-  color: black;
+a:hover {
+  color:skyblue;
 }
 
-body #topbar {
-  background-color: #ff7b00;
-  text-align: center;
-  color: white;
-  font-size: 25px;
-}
-
-body #topbar h1 {
-  margin: 0px;
-  font-weight: bold;
-}
-
-body #bodyContent {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(20%, 1fr) minmax(70%, 3fr);
-      grid-template-columns: minmax(20%, 1fr) minmax(70%, 3fr);
-  padding: 1em;
-  gap: 1em;
-}
-
-body #bodyContent .scroll_body {
-  overflow: auto;
-}
-
-body #bodyContent #contact {
-  background-color: lightgrey;
-  border-radius: 20px;
-  padding: 1em;
-}
-
-body #bodyContent #contact #contact_head {
-  padding: 30px 0px;
-}
-
-body #bodyContent #contact #contact_head img {
-  width: 80%;
-  display: block;
+img {
+  width:80%;
+  display:block;
   margin-left: auto;
   margin-right: auto;
 }
 
-body #bodyContent #contact #contact_head h2 {
+#page-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: navy;
+  text-align: center;
+  color: white;
+  height: 90px;
+}
+
+#page-header > div {
+  position: relative;
+  font-size: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#bodyContent {
+  margin-top: 90px;
+}
+
+#contact_head {
+  padding:30px 0px;
+}
+
+#contact_head > img {
+  width:80%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact_head > h2 {
   text-align: center;
   text-decoration: underline;
 }
 
-body #bodyContent #contact #contact_body {
-  border: 3px solid grey;
+#contact_body {
+  border: 1px solid whitesmoke;
   padding: 40px 30px;
   border-radius: 20px;
 }
 
-body #bodyContent #contact #contact_body h3 {
+#contact_body > h3 {
   text-decoration: underline;
-  margin: 0px;
+  margin:0px;
   padding-bottom: 15px;
 }
 
-body #bodyContent #contact #contact_body h4 {
+#contact_body > h4 {
   margin-bottom: 5px;
 }
 
-body #bodyContent #contact #contact_body ul {
-  padding-left: 20px;
+#contact_body > ul {
+  padding-left:20px;
 }
 
-body #bodyContent #mainContent {
-  background-color: lightgrey;
-  border-radius: 20px;
-  padding: 1em;
-  display: -ms-grid;
-  display: grid;
-  row-gap: 1.5em;
-}
-
-body #bodyContent #mainContent > div {
-  border: 3px solid grey;
+#mainContent > div {
+  border: 1px solid whitesmoke;
   padding: 20px 30px;
   border-radius: 20px;
 }
 
-body #bodyContent #mainContent h2 {
+h2 {
   text-decoration: underline;
 }
 
-body #bodyContent #mainContent ol li::marker {
+ol > li::marker {
   font-weight: bold;
 }
 
-/*
-    References:
+@media screen and (min-width: 769px) {
+  #bodyContent {
+      margin-top: 90px;
+      display:grid;
+      grid-template-columns: minmax(20%,1fr) minmax(70%,3fr);
+      padding:1em;
+      gap:1em;
+  }
 
-    Centering an image in its container:
-    - https://www.w3schools.com/howto/howto_css_image_center.asp
+  #contact {
+      background-color: rgb(0, 0, 60);
+      border-radius: 20px;
+      padding:1em;
+  }
 
-    CSS grid layouts:
-    - https://www.youtube.com/watch?v=jV8B24rSN5o
+  #mainContent {
+      background-color: rgb(0, 0, 60);
+      border-radius: 20px;
+      padding:1em;
+      display:grid;
+      grid-template-columns: 1fr;
+      row-gap: 1.5em;
+  }
+}
 
-    Make markers of ordered list bold:
-    - https://stackoverflow.com/questions/21369843/is-there-a-way-to-make-numbers-in-an-ordered-list-bold
-*/
-/*# sourceMappingURL=style.css.map */
+.scroll_body {
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #bodyContent {
+      display: block;
+  }
+
+  #contact {
+      background-color: rgb(0, 0, 60);
+      padding:1em;
+  }
+
+  #mainContent {
+      background-color: rgb(0, 0, 60);
+      padding:1em;
+      display:grid;
+      grid-template-columns: 1fr;
+      row-gap: 1.5em;
+  }
+}
